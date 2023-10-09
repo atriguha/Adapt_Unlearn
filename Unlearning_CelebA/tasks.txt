@@ -1,0 +1,3 @@
+Gamma-0.1:/home/ece/hdd/Piyush/Unlearning-EBM/Unlearning_EWC_Loss/Unlearning_CelebA/wandb/run-20230711_132922-qxtjlnsw
+gamma-1, ewc_loss:/home/ece/hdd/Piyush/Unlearning-EBM/Unlearning_EWC_Loss/Unlearning_CelebA/wandb/run-20230712_021550-ndu1px78
+only ewc loss: /home/ece/hdd/Piyush/Unlearning-EBM/Unlearning_EWC_Loss/Unlearning_CelebA/wandb/run-20230712_021942-ybrr8tyv
