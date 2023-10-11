@@ -73,6 +73,7 @@ python unlearn_main.py --expt class_name \
 
 
 ```
+This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
 
 ### NOTE REGARDING THE TYPE OF LOSS FUNCTION
     1.$`\{L}_{repulsion}^{{EL2}}`$
