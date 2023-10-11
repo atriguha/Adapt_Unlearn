@@ -17,8 +17,8 @@
 - [Unlearning](#unlearning)
   <!-- - [MNIST_Unlearning](#mnist_unlearning)
   - [CELEBAHQ_Unlearning](#celebahq_unlearning) -->
-- [Contributing](#contributing)
-- [License](#license)
+<!-- - [Contributing](#contributing)
+- [License](#license) -->
 
 
 
