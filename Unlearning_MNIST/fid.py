@@ -165,33 +165,7 @@ def fid_func2(ckpt1,ckpt2):
     device='cuda'
     inception = nn.DataParallel(load_patched_inception_v3()).to(device)
     inception.eval()
-#     transform = transforms.Compose(
-#         [   Grayscale(num_output_channels=3),
-#             transforms.Resize((32,32)),
-#             transforms.ToTensor(),
-#             # transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5), inplace=True),
 
-
-            
-#         ]
-#     )
-    
-#     path="/home/ece/hdd/Piyush/Unlearning-EBM/MNIST/raw/MNIST"
-#     mnist_dataset = datasets.MNIST(path, train=False, download=True, transform=transform)
-#     print(len(mnist_dataset))
-#     ##filtering based on our experiment
-#     # for data in mnist_dataset:
-#     #     print(data[1])
-#     mnist_dataset = [data for data in mnist_dataset if data[1] != feature_type]
-#     print(len(mnist_dataset))
-# # Create a data loader to iterate over the dataset
-#     loader = torch.utils.data.DataLoader(mnist_dataset, batch_size=64, sampler=data_sampler(mnist_dataset, shuffle=True, distributed=0),drop_last=True)
-#     features = extract_feature_from_samples_data(
-#         inception,loader
-#     ).numpy()
-#     print(f"extracted {features.shape[0]} features")
-
-#     del loader,mnist_dataset
     retrained_gen = Generator(32, 128, 8).to(device)
     ckpt1=torch.load(ckpt1)
     retrained_gen.load_state_dict(ckpt1["g_ema"])

@@ -452,9 +452,16 @@ def train(args, loader, generator, discriminator, g_optim, d_optim, g_ema, devic
         g_loss = g_nonsaturating_loss(fake_pred)
         
         # loss=g_loss+250*torch.exp(-(val/val_factor))
+        if(args.loss_type=="reci"):
 
+            loss=g_loss+(1/(val*val_factor))
+        elif(args.loss_type=="exp"):
+            loss=g_loss+100*torch.exp(-(val/val_factor))
+
+        elif(args.loss_type=="l2"):
+            loss=g_loss-(val/val_factor)
         
-        loss=g_loss+(1/(val*val_factor))
+        # loss=g_loss+(1/(val*val_factor))
         # g_loss=g_nonsaturating_loss(fake_pred)
         # if idx%10==0:
         #     val=calc_difference_param_new(generator)
@@ -620,6 +627,12 @@ if __name__ == "__main__":
         type=int,
         default=2,
         help="batch size reducing factor for the path length regularization (reduce memory consumption)",
+    )
+    parser.add_argument(
+        "--loss_type",
+        type=str,
+        
+        help="mention the type of loss function (reci,l2 or exp)",
     )
     parser.add_argument(
         "--d_reg_every",

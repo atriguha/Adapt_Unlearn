@@ -334,7 +334,16 @@ def train(args, loader, generator, discriminator, g_optim, d_optim, g_ema, devic
         else:
             val_factor=(1/args.gamma)
 
-        loss=g_loss+(1/(val*val_factor))+ewc_loss
+
+        if(args.loss_type=="reci"):
+
+            loss=g_loss+(1/(val*val_factor))
+        elif(args.loss_type=="exp"):
+            loss=g_loss+100*torch.exp(-(val/val_factor))
+
+        elif(args.loss_type=="l2"):
+            loss=g_loss-(val/val_factor)
+
         # loss=g_loss+100*torch.exp(-(val/val_factor))+ewc_loss
 
 
@@ -488,6 +497,12 @@ if __name__ == "__main__":
         type=int,
         default=64,
         help="number of the samples generated during training",
+    )
+    parser.add_argument(
+        "--loss_type",
+        type=str,
+        
+        help="mention the type of loss function (reci,l2 or exp)",
     )
     parser.add_argument(
         "--size", type=int, default=32, help="image sizes for the model"

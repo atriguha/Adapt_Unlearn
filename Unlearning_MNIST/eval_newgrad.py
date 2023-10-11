@@ -183,25 +183,6 @@ def eval(args,final_model,feature_type):
             all_pos_new.extend(pos)
 
 
-    # if(len(all_negs_old)!=0):
-    #     grid = utils.make_grid(all_negs_old[0:64], nrow=8, normalize=True, range=(0,1))
-    #     wandb.log({'Images_old_GAN': wandb.Image(torch.nan_to_num(grid.detach().cpu()))}, step=ind)
-         
-
-
-    # if(len(all_img_new)!=0):
-    #         grid = utils.make_grid(all_img_new[0:64], nrow=8, normalize=True, range=(0,1))
-    #         wandb.log({'Images_New_GAN': wandb.Image(torch.nan_to_num(grid.detach().cpu()))}, step=ind)
-            # utils.save_image(
-            #                 neg,
-            #                 f"/home/ece/hdd/Piyush/Unlearning-EBM/VQ-VAE/stylegan2/eval_results/gan_newgrad/trained_gan/neg/{str(ind).zfill(6)}.png",
-            #                 nrow=int(64 ** 0.5),
-            #                 normalize=False,
-            #                 range=(-1, 1),
-            #             )
-            
-    
-
     return all_pos_old,all_pos_new,all_negs_new,all_negs_old,all_img_new
             
 

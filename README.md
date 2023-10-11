@@ -1,8 +1,6 @@
 
 # Adapt_Unlearn
 
-# Project Name
-
 Brief description or introduction of your project.
 
 ## Table of Contents
@@ -14,7 +12,9 @@ Brief description or introduction of your project.
     - [MNIST_Adaptation ](#adapt_mnist)
     - [CELEBAHQ_Adaptation ](#adapt_celebahq)
 
-- [Usage](#usage)
+- [Unlearning](#unlearning)
+    - [MNIST_Unlearning]
+    - [CELEBAHQ_Unlearning]
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -42,5 +42,23 @@ To adapt to a certain class in MNIST
 To adapt to a certain feature in CelebA_HQ dataset
 ```python stylegan2_ewc_train.py --exp feature_name --iter no_pf_iterations --gan_ckpt path_to_pretrained_GAN ```
 
+
+
+### Unlearning
+
+### MNIST_Unlearning
+To unlearn a certain class of MNIST
+```bash
+python train_different_losses.py --expt class_name \
+ --list_of_models path_to_model1 \
+     path_to_model2 \
+     path_to_model3 \
+     path_to_model4 \
+     path_to_model5 \
+    --size 32 --ckpt path_to_pre_trained_GAN --iter no_of_iterations --repel --gamma value_of_constant --loss_type type_of_loss_function
+
+
+```
+### CELEBAHQ_Unlearning
 
 
