@@ -1,45 +1,58 @@
 
 # Adapt_Unlearn
 
-Brief description or introduction of your project.
+
 
 ## Table of Contents
 
-- [Getting Started]
-  - [Prerequisites]
+
+- [Prerequisites]
   
+- [Classifiers]
+    -[MNIST]
+    -[CelebA]
+
 - [Adaptation]
-    - [MNIST_Adaptation ]
-    - [CELEBAHQ_Adaptation ]
+    - [MNIST-Adaptation]
+    - [CELEBAHQ-Adaptation]
     
 
 - [Unlearning]
-    - [MNIST_Unlearning]
-    - [CELEBAHQ_Unlearning]
+    - [MNIST-Unlearning]
+    - [CELEBAHQ-Unlearning]
 - [Contributing]
 - [License]
 
-## Getting Started
 
-Explain what someone needs to do to get started with your project.
 
-### Prerequisites
+## Prerequisites
 Required checkpoints for 
 1. Pre Trained Stylegan2 on CELEBA-HQ
 2. Pre Trained Stylegan2 on MNIST
 3. Pre Trained Classifiers
 
+
+## Classifiers
+
+### MNIST
+Checkpoints And Model for MNIST Classifier is available in this repository itself. We have used the checkpoints provided in [this](https://github.com/csinva/gan-vae-pretrained-pytorch/tree/master/mnist_classifier) repository
+
+### CelebA
+
+For training and implementation of a classifier for classifying facial attributes in CelebA dataset, we have referred to [this](https://github.com/rgkannan676/Recognition-and-Classification-of-Facial-Attributes/tree/main) repository. 
+
+
 ## Adaptation
 
 The implementation for Adaptation is done seperately for MNIST and CELEBA-HQ . They can be found in ADAPT_MNIST and ADAPT_CELEBA folders respectively.
 
-### MNIST_Adaptation
+### MNIST Adaptation
 To adapt to a certain class in MNIST
 ``` python stylegan2_ewc.py --exp class_name --iter no_of_iterations --g_ckpt pre_trained_GAN_checkpoint --size 32 ```
 
 
 
-### CELEBAHQ_Adaptation
+### CELEBAHQ Adaptation
 To adapt to a certain feature in CelebA_HQ dataset
 ```python stylegan2_ewc_train.py --exp feature_name --iter no_pf_iterations --gan_ckpt path_to_pretrained_GAN ```
 
@@ -47,7 +60,7 @@ To adapt to a certain feature in CelebA_HQ dataset
 
 ## Unlearning
 
-### MNIST_Unlearning
+### MNIST Unlearning
 For class level unlearning on MNIST
 ```bash
 python train_different_losses.py --expt class_name \
@@ -60,7 +73,7 @@ python train_different_losses.py --expt class_name \
 
 
 ```
-### CELEBAHQ_Unlearning
+### CELEBAHQ Unlearning
 For feature level unlearning on CELEBA_HQ
 ```bash
 python unlearn_main.py --expt class_name \
