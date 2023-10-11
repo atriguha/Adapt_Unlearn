@@ -23,8 +23,10 @@ Brief description or introduction of your project.
 Explain what someone needs to do to get started with your project.
 
 ### Prerequisites
-
-List any prerequisites that someone needs to have installed or set up before using your project.
+Required checkpoints for 
+1. Pre Trained Stylegan2 on CELEBA-HQ
+2. Pre Trained Stylegan2 on MNIST
+3. Pre Trained Classifiers
 
 ### Adaptation
 
