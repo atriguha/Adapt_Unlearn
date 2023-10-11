@@ -75,7 +75,7 @@ python unlearn_main.py --expt class_name \
 ```
 
 ### NOTE REGARDING THE TYPE OF LOSS FUNCTION
-    1. $\mathcal{L}_{repulsion}^{{EL2}}$
+    1.$`\{L}_{repulsion}^{{EL2}}`$
     2.$\mathcal{L}_{repulsion}^{{NL2}}$
     3.$\mathcal{L}_{repulsion}^{{IL2}}$
 
