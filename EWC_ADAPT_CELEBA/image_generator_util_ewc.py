@@ -110,7 +110,7 @@ def img_classifier(images,noise,feature_type):
     resnext50_32x4d.fc = nn.Linear(2048, 40)
     resnext50_32x4d.to(device)
     ##provide classifier path
-    path_toLoad="/Stylegan2/classifier_celeba/classifier_github/model/model_3_epoch.pt"
+    path_toLoad="/classifier_celeba/model/model_3_epoch.pt"
     checkpoint = torch.load(path_toLoad)
     
     resnext50_32x4d.load_state_dict(checkpoint['model_state_dict'])

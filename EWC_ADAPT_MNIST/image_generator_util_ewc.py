@@ -45,7 +45,7 @@ def mixing_noise(batch, latent_dim, prob, device):
 #     return checkpoint_
 
 ##provide classifier path
-classifier_checkpoint = "/Stylegan2/unlearning_gan/EWC_ADAPT_MNIST/Classifier_Mnist/lenet_epoch=12_test_acc=0.991.pth"
+classifier_checkpoint = "EWC_ADAPT_MNIST/Classifier_Mnist/lenet_epoch=12_test_acc=0.991.pth"
 def img_classifier(images,noise,feature_type):
     # global classifier_checkpoint
     device = "cuda"

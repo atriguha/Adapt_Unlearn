@@ -479,6 +479,12 @@ if __name__ == "__main__":
         default=256,
         help="probability update interval of the adaptive augmentation",
     )
+    parser.add_argument(
+        "gan_ckpt",
+        type=str,
+        required=True,
+        help="Pre-trained GAN checkpoint"
+    )
 
     args = parser.parse_args()
     args.latent = 512
@@ -495,7 +501,7 @@ if __name__ == "__main__":
         generator = Generator(
             256, 512, 8, channel_multiplier=2
         ).to(device)
-        ckpt_gen="/home/ece/hdd/Piyush/Stylegan2/unlearning_gan/EWC_ADAPT_CELEBA/pretrained_GAN_ckpt/360000.pt"
+        ckpt_gen=args.gan_ckpt
 
         ckpt = torch.load(ckpt_gen)
 

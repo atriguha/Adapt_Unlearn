@@ -402,6 +402,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--size", type=int, default=256, help="image sizes for the model"
     )
+    
     parser.add_argument(
         "--r1", type=float, default=10, help="weight of the r1 regularization"
     )
