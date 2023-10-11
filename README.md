@@ -11,8 +11,8 @@ Brief description or introduction of your project.
   - [Prerequisites](#prerequisites)
   
 - [Adaptation](#adaptation)
-    -[MNIST_Adaptation ](#adapt_mnist)
-    -[CELEBAHQ_Adaptation ](#adapt_celebahq)
+    - [MNIST_Adaptation ](#adapt_mnist)
+    - [CELEBAHQ_Adaptation ](#adapt_celebahq)
 
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -32,11 +32,13 @@ The implementation for Adaptation is done seperately for MNIST and CELEBA-HQ . T
 
 ### MNIST_Adaptation 
 To adapt to a certain class in MNIST
-``` python stylegan2_ewc.py --exp class_name --iter no_of_iterations --g_ckpt pre_trained_GAN_checkpoints --size 32 ```
+``` python stylegan2_ewc.py --exp class_name --iter no_of_iterations --g_ckpt pre_trained_GAN_checkpoint --size 32 ```
 
 
 
-### C
+### CELEBAHQ_Adaptation
+To adapt to a certain feature in CelebA_HQ dataset
+```python stylegan2_ewc_train.py --exp feature_name --iter no_pf_iterations --gan_ckpt path_to_pretrained_GAN ```
 
 
 
