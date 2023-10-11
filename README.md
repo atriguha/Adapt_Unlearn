@@ -1,5 +1,6 @@
 
-# Adapt_Unlearn
+# Unlearning-GANs-via-Few-Shot-Adaptation
+
 
 
 
@@ -11,11 +12,11 @@
   - [MNIST](#mnist)
   - [CelebA](#celeba)
 - [Adaptation](#adaptation)
-  - [MNIST_Adaptation](#mnist_adaptation)
-  - [CELEBAHQ_Adaptation](#celebahq_adaptation)
+  <!-- - [MNIST_Adaptation](#mnist_adaptation)
+  - [CELEBAHQ_Adaptation](#celebahq_adaptation) -->
 - [Unlearning](#unlearning)
-  - [MNIST_Unlearning](#mnist_unlearning)
-  - [CELEBAHQ_Unlearning](#celebahq_unlearning)
+  <!-- - [MNIST_Unlearning](#mnist_unlearning)
+  - [CELEBAHQ_Unlearning](#celebahq_unlearning) -->
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -42,21 +43,25 @@ For training and implementation of a classifier for classifying facial attribute
 
 The implementation for Adaptation is done seperately for MNIST and CELEBA-HQ . They can be found in ADAPT_MNIST and ADAPT_CELEBA folders respectively.
 
-### MNIST Adaptation
+* MNIST Adaptation
 To adapt to a certain class in MNIST
-``` python stylegan2_ewc.py --exp class_name --iter no_of_iterations --g_ckpt pre_trained_GAN_checkpoint --size 32 ```
+```bash
+ python stylegan2_ewc.py --exp class_name --iter no_of_iterations --g_ckpt pre_trained_GAN_checkpoint --size 32 
+ ```
 
 
 
-### CELEBAHQ Adaptation
+* CELEBAHQ Adaptation
 To adapt to a certain feature in CelebA_HQ dataset
-```python stylegan2_ewc_train.py --exp feature_name --iter no_pf_iterations --gan_ckpt path_to_pretrained_GAN ```
+```bash
+python stylegan2_ewc_train.py --exp feature_name --iter no_pf_iterations --gan_ckpt path_to_pretrained_GAN 
+```
 
 
 
 ## Unlearning
 
-### MNIST Unlearning
+* MNIST Unlearning
 For class level unlearning on MNIST
 ```bash
 python train_different_losses.py --expt class_name \
@@ -67,9 +72,8 @@ python train_different_losses.py --expt class_name \
      path_to_model5 \
     --size 32 --ckpt path_to_pre_trained_GAN --iter no_of_iterations --repel --gamma value_of_constant --loss_type type_of_loss_function
 
-
 ```
-### CELEBAHQ Unlearning
+* CELEBAHQ Unlearning
 For feature level unlearning on CELEBA_HQ
 ```bash
 python unlearn_main.py --expt class_name \
