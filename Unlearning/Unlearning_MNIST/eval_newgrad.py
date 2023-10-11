@@ -123,9 +123,7 @@ def eval(args,final_model,feature_type):
     neg_noise=[]
     
 
-    # sample_z=torch.load("/home/ece/hdd/Piyush/Unlearning-EBM/VQ-VAE/stylegan2/sample_z.pt")
-        # for names,param in initial_model.named_parameters():
-        #     param.data+=param_difference[names]*gamma
+    
     latent_space=[]
     all_negs_old=[]
     all_negs_new=[]

@@ -224,7 +224,7 @@ if __name__ == "__main__":
         ckpt = torch.load(ckpt_gen)
 
         final_model.load_state_dict(ckpt)
-        # sample_z=torch.load("/home/ece/hdd/Piyush/Unlearning-EBM/VQ-VAE/stylegan2/sample_z.pt")
+       
             # for names,param in initial_model.named_parameters():
             #     param.data+=param_difference[names]*gamma
         latent_space=[]

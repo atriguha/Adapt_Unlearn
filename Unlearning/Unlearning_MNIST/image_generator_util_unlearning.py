@@ -35,8 +35,8 @@ def mixing_noise(batch, latent_dim, prob, device):
                 return [make_noise(batch, latent_dim, 1, device)]
 # def get_checkpoint():
 #     # checkpoint = torch.load(
-#     # 			"/home/ece/hdd/Piyush/Unlearning-EBM/model_best40.pt")
-#     checkpoint=torch.load("/home/ece/hdd/Piyush/Unlearning-EBM/classifier/checkpoints/model40checkpoint_loss.pt")
+#     # 			"/model_best40.pt")
+#     checkpoint=torch.load("/classifier/checkpoints/model40checkpoint_loss.pt")
 #     checkpoint_ = {}
 
 #     for key in checkpoint.keys():

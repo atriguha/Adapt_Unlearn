@@ -1,6 +1,6 @@
 import os
 import sys
-# sys.path.append("/home/ece/hdd/Piyush/Unlearning-EBM")
+
 import pickle
 import numpy as np
 import argparse
@@ -186,15 +186,13 @@ if __name__ == "__main__":
     fids=[]
     ckpt_gens=file_paths
     ckpt_gens.sort()
-    # ckpt_gens=["/home/ece/hdd/Piyush/stylegan2_MNIST/checkpoint/8/200000.pt"]
+    
     for ckpt_gen in ckpt_gens:
         ckpt = torch.load(ckpt_gen)
 
         final_model.load_state_dict(ckpt["g_ema"])
 
-        # sample_z=torch.load("/home/ece/hdd/Piyush/Unlearning-EBM/VQ-VAE/stylegan2/sample_z.pt")
-            # for names,param in initial_model.named_parameters():
-            #     param.data+=param_difference[names]*gamma
+        
         latent_space=[]
         all_negs_old=[]
         all_negs_new=[]

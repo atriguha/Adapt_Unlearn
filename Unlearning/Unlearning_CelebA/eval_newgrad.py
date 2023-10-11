@@ -1,6 +1,6 @@
 import os
 import sys
-# sys.path.append("/home/ece/hdd/Piyush/Unlearning-EBM")
+
 
 import argparse
 from tqdm import tqdm
@@ -148,9 +148,7 @@ def eval(final_model,feature_type):
     neg_noise=[]
     
 
-    # sample_z=torch.load("/home/ece/hdd/Piyush/Unlearning-EBM/VQ-VAE/stylegan2/sample_z.pt")
-        # for names,param in initial_model.named_parameters():
-        #     param.data+=param_difference[names]*gamma
+    
     latent_space=[]
     all_negs_old=[]
     all_negs_new=[]
@@ -211,23 +209,6 @@ def eval(final_model,feature_type):
         all_pos_new.extend(pos)
 
 
-    # if(len(all_negs_old)!=0):
-    #     grid = utils.make_grid(all_negs_old[0:64], nrow=8, normalize=True, range=(0,1))
-    #     wandb.log({'Images_old_GAN': wandb.Image(torch.nan_to_num(grid.detach().cpu()))}, step=ind)
-         
-
-
-    # if(len(all_img_new)!=0):
-    #         grid = utils.make_grid(all_img_new[0:64], nrow=8, normalize=True, range=(0,1))
-    #         wandb.log({'Images_New_GAN': wandb.Image(torch.nan_to_num(grid.detach().cpu()))}, step=ind)
-            # utils.save_image(
-            #                 neg,
-            #                 f"/home/ece/hdd/Piyush/Unlearning-EBM/VQ-VAE/stylegan2/eval_results/gan_newgrad/trained_gan/neg/{str(ind).zfill(6)}.png",
-            #                 nrow=int(64 ** 0.5),
-            #                 normalize=False,
-            #                 range=(-1, 1),
-            #             )
-            
     
 
     return all_pos_old,all_pos_new,all_negs_new,all_negs_old,all_img_new
@@ -253,8 +234,8 @@ def main():
 
 
 
-
-    ckpt_gen="/home/ece/hdd/Piyush/Unlearning-EBM/VQ-VAE/stylegan2/checkpoint/actual_checkpoint.pt"
+    ##checkpoint of pre-trained GAN
+    ckpt_gen="/checkpoint/actual_checkpoint.pt"
 
     ckpt = torch.load(ckpt_gen)
 
@@ -265,8 +246,8 @@ def main():
 
 
 
-
-    ckpt_gen="/home/ece/hdd/Piyush/Unlearning-EBM/VQ-VAE/stylegan2/wandb/run-20230620_195635-d7fozq16/files/03000.pt"
+    ##checkpoint of GAN to be evaluated
+    ckpt_gen="/stylegan2/wandb/run-20230620_195635-d7fozq16/files/03000.pt"
 
     ckpt = torch.load(ckpt_gen)
 

@@ -48,15 +48,7 @@ def calc_difference_param():
                
                
                ]
-    # ckpt_gens=["/home/ece/hdd/Piyush/Unlearning-EBM/VQ-VAE/stylegan2/checkpoint/8/neg/500000000.0/50/005000.pt"
-               
-            #    ]
-    # start=5000
-
-    # for i in range (1):
-          
-    #       ckpt_gens.append("/home/ece/hdd/Piyush/Unlearning-EBM/VQ-VAE/stylegan2/checkpoint/neg/500000000.0/50/00"+str(start)+".pt")
-    #       start+=1000
+    
 
 
 
@@ -74,7 +66,7 @@ def calc_difference_param():
           
 
 
-        # ckpt_gen="/home/ece/hdd/Piyush/Unlearning-EBM/VQ-VAE/stylegan2/checkpoint/neg/500000000.0/50/055000.pt"
+        # ckpt_gen="/Unlearning-EBM/VQ-VAE/stylegan2/checkpoint/neg/500000000.0/50/055000.pt"
 
         ckpt = torch.load(ckpt_gen)
 
