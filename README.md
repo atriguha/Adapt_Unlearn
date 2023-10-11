@@ -1,5 +1,5 @@
 
-# Unlearning-GANs-via-Few-Shot-Adaptation
+# Adapt then Unlearn: Exploiting Parameter Space Semantics for Unlearning in Generative Adversarial Networks
 
 
 
@@ -88,7 +88,7 @@ python unlearn_main.py --expt class_name \
 ```
 <!-- This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$ -->
 
-### NOTE REGARDING THE TYPE OF LOSS FUNCTION
+### NOTE REGARDING THE TYPE OF REPULSION LOSS FUNCTION
 * For $\{L}_{repulsion}^{{EL2}}$, use ```args.loss_type="exp"```
 
 * For $\mathcal{L}_{repulsion}^{{NL2}}$, use ```args.loss_type="l2"```
