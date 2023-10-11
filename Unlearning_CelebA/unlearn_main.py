@@ -161,14 +161,14 @@ ckpt_gens_repel=["/EWC_ADAPT_CELEBA/wandb/run-20230805_172211-f9x0o3ai/files/EWC
 
 
 
-def calc_difference_param_new(initial_model,ckpt_gens):
+def calc_difference_param_new(args,initial_model):
     from model import Generator, Discriminator
     mse=nn.MSELoss()
 
     
     
     
-
+    ckpt_gens=args.list_of_models
 
 
 
@@ -228,7 +228,7 @@ def calc_difference_param_new(initial_model,ckpt_gens):
     # print(parameter_difference)
     return val
 
-def calc_difference_param_new_attract(initial_model,ckpt_gens):
+def calc_difference_param_new_attract(args,initial_model,ckpt_gens):
     from model import Generator, Discriminator
     mse=nn.MSELoss()
 
@@ -240,7 +240,7 @@ def calc_difference_param_new_attract(initial_model,ckpt_gens):
 
 
 
-
+    
     
 
     parameter_difference = {}
@@ -616,6 +616,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--r1", type=float, default=10, help="weight of the r1 regularization"
     )
+    parser.add_argument('--list_of_models', nargs='+', help='List of models adapted on EWC loss', required=True)
+
     parser.add_argument(
         "--path_regularize",
         type=float,

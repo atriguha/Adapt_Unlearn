@@ -11,6 +11,7 @@ Brief description or introduction of your project.
 - [Adaptation](#adaptation)
     - [MNIST_Adaptation ](#adapt_mnist)
     - [CELEBAHQ_Adaptation ](#adapt_celebahq)
+    
 
 - [Unlearning](#unlearning)
     - [MNIST_Unlearning]
@@ -18,36 +19,36 @@ Brief description or introduction of your project.
 - [Contributing](#contributing)
 - [License](#license)
 
-## Getting Started
+## Getting Started(#getting-started)
 
 Explain what someone needs to do to get started with your project.
 
-### Prerequisites
+### Prerequisites(#prerequisites)
 Required checkpoints for 
 1. Pre Trained Stylegan2 on CELEBA-HQ
 2. Pre Trained Stylegan2 on MNIST
 3. Pre Trained Classifiers
 
-### Adaptation
+## Adaptation(#adaptation)
 
 The implementation for Adaptation is done seperately for MNIST and CELEBA-HQ . They can be found in ADAPT_MNIST and ADAPT_CELEBA folders respectively.
 
-### MNIST_Adaptation 
+### MNIST_Adaptation(#adapt_mnist)
 To adapt to a certain class in MNIST
 ``` python stylegan2_ewc.py --exp class_name --iter no_of_iterations --g_ckpt pre_trained_GAN_checkpoint --size 32 ```
 
 
 
-### CELEBAHQ_Adaptation
+### CELEBAHQ_Adaptation(#adapt_celebahq)
 To adapt to a certain feature in CelebA_HQ dataset
 ```python stylegan2_ewc_train.py --exp feature_name --iter no_pf_iterations --gan_ckpt path_to_pretrained_GAN ```
 
 
 
-### Unlearning
+## Unlearning(#unlearning)
 
 ### MNIST_Unlearning
-To unlearn a certain class of MNIST
+For class level unlearning on MNIST
 ```bash
 python train_different_losses.py --expt class_name \
  --list_of_models path_to_model1 \
@@ -60,5 +61,25 @@ python train_different_losses.py --expt class_name \
 
 ```
 ### CELEBAHQ_Unlearning
+For feature level unlearning on CELEBA_HQ
+```bash
+python unlearn_main.py --expt class_name \
+ --list_of_models path_to_model1 \
+     path_to_model2 \
+     path_to_model3 \
+     path_to_model4 \
+     path_to_model5 \
+     --ckpt path_to_pre_trained_GAN --iter no_of_iterations --repel_loss --gamma value_of_constant --loss_type type_of_loss_function
+
+
+```
+
+### NOTE REGARDING THE TYPE OF LOSS FUNCTION
+    1. $\mathcal{L}_{repulsion}^{{EL2}}$
+    2.$\mathcal{L}_{repulsion}^{{NL2}}$
+    3.$\mathcal{L}_{repulsion}^{{IL2}}$
+
+
+
 
 
