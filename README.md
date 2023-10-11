@@ -6,22 +6,18 @@
 ## Table of Contents
 
 
-- [Prerequisites]
-  
-- [Classifiers]
-    -[MNIST]
-    -[CelebA]
-
-- [Adaptation]
-    - [MNIST-Adaptation]
-    - [CELEBAHQ-Adaptation]
-    
-
-- [Unlearning]
-    - [MNIST-Unlearning]
-    - [CELEBAHQ-Unlearning]
-- [Contributing]
-- [License]
+- [Prerequisites](#prerequisites)
+- [Classifiers](#classifiers)
+  - [MNIST](#mnist)
+  - [CelebA](#celeba)
+- [Adaptation](#adaptation)
+  - [MNIST_Adaptation](#mnist_adaptation)
+  - [CELEBAHQ_Adaptation](#celebahq_adaptation)
+- [Unlearning](#unlearning)
+  - [MNIST_Unlearning](#mnist_unlearning)
+  - [CELEBAHQ_Unlearning](#celebahq_unlearning)
+- [Contributing](#contributing)
+- [License](#license)
 
 
 
