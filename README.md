@@ -39,8 +39,7 @@ For training and implementation of a classifier for classifying facial attribute
 
 The implementation for Adaptation is done seperately for MNIST and CELEBA-HQ . They can be found in ADAPT_MNIST and ADAPT_CELEBA folders respectively.
 
-* MNIST Adaptation
-To adapt to a certain class in MNIST
+* To adapt to a certain class in MNIST
 
 ```bash
  python stylegan2_ewc.py --exp class_name --iter no_of_iterations --g_ckpt pre_trained_GAN_checkpoint --size 32 
@@ -48,8 +47,7 @@ To adapt to a certain class in MNIST
 
 
 
-* CELEBAHQ Adaptation
-To adapt to a certain feature in CelebA_HQ dataset
+* To adapt to a certain feature in CelebA_HQ dataset
 
 ```bash
 python stylegan2_ewc_train.py --exp feature_name --iter no_pf_iterations --gan_ckpt path_to_pretrained_GAN 
@@ -59,8 +57,7 @@ python stylegan2_ewc_train.py --exp feature_name --iter no_pf_iterations --gan_c
 
 ## Unlearning
 
-* MNIST Unlearning
-For class level unlearning on MNIST
+* For class level unlearning on MNIST
 
 ```bash
 python train_different_losses.py --expt class_name \
@@ -72,8 +69,7 @@ python train_different_losses.py --expt class_name \
     --size 32 --ckpt path_to_pre_trained_GAN --iter no_of_iterations --repel --gamma value_of_constant --loss_type type_of_loss_function
 
 ```
-* CELEBAHQ Unlearning
-For feature level unlearning on CELEBA_HQ
+* For feature level unlearning on CELEBA_HQ
 ```bash
 python unlearn_main.py --expt class_name \
  --list_of_models path_to_model1 \
