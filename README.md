@@ -12,13 +12,9 @@
   - [MNIST](#mnist)
   - [CelebA](#celeba)
 - [Adaptation](#adaptation)
-  <!-- - [MNIST_Adaptation](#mnist_adaptation)
-  - [CELEBAHQ_Adaptation](#celebahq_adaptation) -->
+  
 - [Unlearning](#unlearning)
-  <!-- - [MNIST_Unlearning](#mnist_unlearning)
-  - [CELEBAHQ_Unlearning](#celebahq_unlearning) -->
-<!-- - [Contributing](#contributing)
-- [License](#license) -->
+
 
 
 
@@ -45,6 +41,7 @@ The implementation for Adaptation is done seperately for MNIST and CELEBA-HQ . T
 
 * MNIST Adaptation
 To adapt to a certain class in MNIST
+
 ```bash
  python stylegan2_ewc.py --exp class_name --iter no_of_iterations --g_ckpt pre_trained_GAN_checkpoint --size 32 
  ```
@@ -53,6 +50,7 @@ To adapt to a certain class in MNIST
 
 * CELEBAHQ Adaptation
 To adapt to a certain feature in CelebA_HQ dataset
+
 ```bash
 python stylegan2_ewc_train.py --exp feature_name --iter no_pf_iterations --gan_ckpt path_to_pretrained_GAN 
 ```
@@ -63,6 +61,7 @@ python stylegan2_ewc_train.py --exp feature_name --iter no_pf_iterations --gan_c
 
 * MNIST Unlearning
 For class level unlearning on MNIST
+
 ```bash
 python train_different_losses.py --expt class_name \
  --list_of_models path_to_model1 \
@@ -86,7 +85,7 @@ python unlearn_main.py --expt class_name \
 
 
 ```
-<!-- This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$ -->
+
 
 ### NOTE REGARDING THE TYPE OF REPULSION LOSS FUNCTION
 * For $\{L}_{repulsion}^{{EL2}}$, use ```args.loss_type="exp"```
