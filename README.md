@@ -84,6 +84,8 @@ python unlearn_main.py --expt class_name \
 ### FEATURE LIST OF CELEBA-HQ
 | Attribute            | Index | Attribute            | Index | Attribute         | Index | Attribute           | Index | Attribute          | Index |
 |----------------------|-------|----------------------|-------|-------------------|-------|---------------------|-------|--------------------|-------|
+| **Attributes**       | **Index** | **Attributes**       | **Index** | **Attributes**    | **Index** | **Attributes**      | **Index** | **Attributes**    | **Index** |
+|----------------------|-------|----------------------|-------|-------------------|-------|---------------------|-------|--------------------|-------|
 | 5_o_Clock_Shadow     | 0     | Arched_Eyebrows      | 1     | Attractive        | 2     | Bags_Under_Eyes    | 3     | Bald               | 4     |
 | Bangs                | 5     | Big_Lips             | 6     | Big_Nose           | 7     | Black_Hair         | 8     | Blond_Hair         | 9     |
 | Blurry               | 10    | Brown_Hair           | 11    | Bushy_Eyebrows     | 12    | Chubby             | 13    | Double_Chin        | 14    |
@@ -92,6 +94,7 @@ python unlearn_main.py --expt class_name \
 | OvalFace             | 25    | PaleSkin             | 26    | PointyNose         | 27    | RecedingHairline   | 28    | RosyCheeks         | 29    |
 | Sideburns            | 30    | Smiling              | 31    | StraightHair       | 32    | WavyHair           | 33    | WearingEarrings    | 34    |
 | WearingHat           | 35    | WearingLipstick      | 36    | WearingNecklace     | 37    | WearingNecktie     | 38    | Young              | 39    |
+
 
 
 
