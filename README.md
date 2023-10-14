@@ -81,6 +81,49 @@ python unlearn_main.py --expt class_name \
 
 
 ```
+### FEATURE LIST OF CELEBA-HQ
+| Attribute             | Index |
+|-----------------------|-------|
+| 5_o_Clock_Shadow      | 0     |
+| Arched_Eyebrows       | 1     |
+| Attractive            | 2     |
+| Bags_Under_Eyes       | 3     |
+| Bald                  | 4     |
+| Bangs                 | 5     |
+| Big_Lips              | 6     |
+| Big_Nose              | 7     |
+| Black_Hair            | 8     |
+| Blond_Hair            | 9     |
+| Blurry                | 10    |
+| Brown_Hair            | 11    |
+| Bushy_Eyebrows        | 12    |
+| Chubby                | 13    |
+| Double_Chin           | 14    |
+| Eyeglasses            | 15    |
+| Goatee                | 16    |
+| Gray_Hair             | 17    |
+| HeavyMakeup           | 18    |
+| HighCheekbones        | 19    |
+| Male                  | 20    |
+| MouthSlightlyOpen     | 21    |
+| Mustache              | 22    |
+| NarrowEyes            | 23    |
+| NoBeard               | 24    |
+| OvalFace              | 25    |
+| PaleSkin              | 26    |
+| PointyNose            | 27    |
+| RecedingHairline      | 28    |
+| RosyCheeks            | 29    |
+| Sideburns             | 30    |
+| Smiling               | 31    |
+| StraightHair          | 32    |
+| WavyHair              | 33    |
+| WearingEarrings       | 34    |
+| WearingHat            | 35    |
+| WearingLipstick       | 36    |
+| WearingNecklace       | 37    |
+| WearingNecktie        | 38    |
+| Young                 | 39    |
 
 
 ### NOTE REGARDING THE TYPE OF REPULSION LOSS FUNCTION
