@@ -102,6 +102,16 @@ python unlearn_main.py --expt class_name \
 * For $\mathcal{L}_{repulsion}^{{IL2}}$, use ```args.loss_type="reci"```
 
 
+### LINK TO UNLEARNED MODELS
+
+[Unlearned Models Folder](https://mega.nz/folder/aJ5QRZ5D#R373C4YIRzFtmd2rxTY2sA)
+
+The link contains a folder with subdirectories for:
+- **CelebA-HQ**
+- **MNIST**
+- **AFHQ**
+
+Each subdirectory contains models trained to unlearn specific features in the dataset.
 
 
 
