@@ -3,8 +3,7 @@
 **Enabling Selective Forgetting in Generative Models**  
 *[Arxiv](https://arxiv.org/abs/2309.14054)* | *[TMLR](https://openreview.net/forum?id=jAHEBivObO)* | ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-<!-- ![Teaser Image](https://via.placeholder.com/800x300.png?text=GAN+Unlearning+Visual+Demo)  
-*Example of feature unlearning in CelebA-HQ (Smiling → Neutral)* -->
+![Teaser Image](teaser.png)  
 
 ---
 
